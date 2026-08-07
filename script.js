@@ -126,7 +126,7 @@ document.getElementById('colorBtn').addEventListener('click', () => {
 /* ============================================================
    TYPED TEXT
    ============================================================ */
-const roles = ['QA Automation Engineer', 'ML Researcher', 'Software Engineer', 'CS Graduate Student'];
+const roles = ['QA Automation Engineer', 'ML Researcher', 'Software Development Engineer','Software Development Engineer in Test', 'CS Graduate Student'];
 let ri = 0, ci = 0, del = false;
 const te = document.getElementById('typed-text');
 function type() {
