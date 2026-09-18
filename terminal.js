@@ -47,7 +47,7 @@ if (termNavBtn) {
     ...Object.keys(NAV),
     'help', 'help easter', 'clear', 'whoami', // <-- added 'help easter' here
     'theme dark', 'theme light', 'theme f1', 'theme space',
-    'race', 'rover', 'jwst', 'telescope', 'launch',
+    'race', 'rover', 'jwst', 'telescope', 
     'konami',
   ];
 
@@ -153,7 +153,6 @@ if (termNavBtn) {
       line('  race        — F1 race simulation');
       line('  rover       — NASA rover mission control');
       line('  jwst        — astronomy picture of the day');
-      line('  launch      — SpaceX launch countdown');
       gap(); return;
     }
 
@@ -264,7 +263,7 @@ if (termNavBtn) {
     }
 
     /* easter eggs */
-    if (['race', 'jwst', 'telescope', 'launch'].includes(cmd)) {
+    if (['race', 'jwst', 'telescope'].includes(cmd)) {
       openEggWindow(cmd === 'telescope' ? 'jwst' : cmd);
       /* easter eggs */
 
@@ -426,12 +425,12 @@ if (termNavBtn) {
       return;
     }
 
-    if (['rover', 'jwst', 'telescope', 'launch'].includes(cmd)) {
+    if (['rover', 'jwst', 'telescope'].includes(cmd)) {
       openEggWindow(cmd === 'telescope' ? 'jwst' : cmd);
       gap(); return;
     }
 
-    if (['rover', 'jwst', 'telescope', 'launch'].includes(cmd)) {
+    if (['rover', 'jwst', 'telescope'].includes(cmd)) {
       openEggWindow(cmd === 'telescope' ? 'jwst' : cmd);
       gap(); return;
     }
@@ -529,7 +528,6 @@ if (termNavBtn) {
     race:   { icon: '🏎️', label: '// f1_race.sim',           msg: 'F1 race simulation — coming soon.\nFive cars. One track. HIRE ME always podiums.' },
     rover:  { icon: '🛸', label: '// nasa_rover.telemetry',   msg: 'NASA rover mission control — coming soon.\nReal Perseverance data via NASA open API.' },
     jwst:   { icon: '🔭', label: '// jwst.apod',              msg: 'Astronomy Picture of the Day — coming soon.\nDaily NASA imagery via APOD API.' },
-    launch: { icon: '🚀', label: '// spacex.launch_countdown', msg: 'SpaceX launch countdown — coming soon.\nNext launch data via The Space Devs API.' },
   };
 
   const eggOverlay = document.getElementById('eggOverlay');
